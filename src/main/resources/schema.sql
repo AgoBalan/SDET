@@ -1,0 +1,10 @@
+CREATE DATABASE IF NOT EXISTS employeedb;
+USE employeedb;
+
+CREATE TABLE IF NOT EXISTS employees (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    salary DOUBLE NOT NULL,
+    department VARCHAR(50) NOT NULL
+);
