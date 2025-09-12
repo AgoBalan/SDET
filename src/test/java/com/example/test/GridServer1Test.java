@@ -9,6 +9,10 @@ public class GridServer1Test extends BaseTest {
         
         // Navigate to your web application
         driver.get("https://www.google.com");
+        System.out.println("Title: " + driver.getTitle());
         driver.quit();
+        try{
+        Thread.sleep(1000);
+        }catch(Exception e){}
     }
 }
