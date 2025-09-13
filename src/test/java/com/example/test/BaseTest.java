@@ -33,6 +33,9 @@ public class BaseTest {
            
             //start the Jenkins
             //Runtime.getRuntime().exec("cmd /c start Bat_Files\\jenkins.bat");
+            //To run locally docker 
+          //  Runtime.getRuntime().exec("cmd /c start Bat_Files\\dockerUp.bat");
+            //To run locally docker in Jenkins
             Runtime.getRuntime().exec("cmd /c start Bat_Files\\dockerJenkinsUp.bat");
             verifyServerStatus("output.txt","Node has been added",3);
             //scale up the chrome node
@@ -52,7 +55,10 @@ public class BaseTest {
     @AfterSuite
     public void tearDownCompose() throws IOException, InterruptedException {
         // Stop Docker Compose setup
-        Runtime.getRuntime().exec("cmd /c start Bat_Files\\dockerJenkinsDown.bat");
+          //To run locally with docker
+       // Runtime.getRuntime().exec("cmd /c start Bat_Files\\dockerDown.bat");
+        //To run locally docker in Jenkins
+         Runtime.getRuntime().exec("cmd /c start Bat_Files\\dockerJenkinsDown.bat");
         Thread.sleep(10000);
         verifyServerStatus("outputOfDown.txt"," Network jdbc-demo_default  Removed",1);
         // Kill CMD by task name
