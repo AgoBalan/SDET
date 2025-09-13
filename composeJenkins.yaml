@@ -47,8 +47,8 @@ services:
     networks:
       - test-network
 
-  jenkins:
-    image: jenkins/jenkins:lts
+    jenkins:
+    image: jenkins-jdk17
     container_name: jenkins
     ports:
       - "8080:8080"
@@ -57,6 +57,7 @@ services:
       - jenkins_home:/var/jenkins_home
     networks:
       - test-network
+
 
 volumes:
   jenkins_home:
