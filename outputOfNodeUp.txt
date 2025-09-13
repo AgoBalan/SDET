@@ -1,27 +1,27 @@
  Network jdbc-demo_default  Creating
  Network jdbc-demo_default  Created
-time="2025-09-13T16:12:09-04:00" level=warning msg="Found orphan containers ([jenkins]) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up."
+time="2025-09-13T16:18:10-04:00" level=warning msg="Found orphan containers ([jenkins]) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up."
  Container selenium-hub  Recreate
  Container selenium-hub  Recreated
  Container jdbc-demo-chrome-5  Creating
- Container jdbc-demo-chrome-3  Creating
  Container jdbc-demo-chrome-2  Creating
- Container jdbc-demo-chrome-4  Creating
+ Container jdbc-demo-chrome-3  Creating
  Container jdbc-demo-chrome-1  Recreate
- Container jdbc-demo-chrome-5  Created
+ Container jdbc-demo-chrome-4  Creating
  Container jdbc-demo-chrome-4  Created
- Container jdbc-demo-chrome-3  Created
+ Container jdbc-demo-chrome-5  Created
  Container jdbc-demo-chrome-2  Created
+ Container jdbc-demo-chrome-3  Created
  Container jdbc-demo-chrome-1  Recreated
  Container selenium-hub  Starting
  Container selenium-hub  Started
- Container jdbc-demo-chrome-1  Starting
- Container jdbc-demo-chrome-1  Started
  Container jdbc-demo-chrome-3  Starting
  Container jdbc-demo-chrome-3  Started
+ Container jdbc-demo-chrome-1  Starting
+ Container jdbc-demo-chrome-1  Started
+ Container jdbc-demo-chrome-5  Starting
+ Container jdbc-demo-chrome-5  Started
  Container jdbc-demo-chrome-2  Starting
  Container jdbc-demo-chrome-2  Started
  Container jdbc-demo-chrome-4  Starting
  Container jdbc-demo-chrome-4  Started
- Container jdbc-demo-chrome-5  Starting
- Container jdbc-demo-chrome-5  Started
