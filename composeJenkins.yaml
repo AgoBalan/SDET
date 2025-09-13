@@ -1,0 +1,62 @@
+version: '3.8'
+
+networks:
+  test-network:
+    driver: bridge
+
+services:
+  selenium-hub:
+    image: selenium/hub:4.35.0-20250828
+    container_name: selenium-hub
+    ports:
+      - "4442:4442"
+      - "4443:4443"
+      - "4444:4444"
+    networks:
+      - test-network
+
+  chrome:
+    image: selenium/node-chrome:4.35.0-20250828
+    platform: linux/amd64
+    shm_size: 2gb
+    depends_on:
+      - selenium-hub
+    environment:
+      - SE_EVENT_BUS_HOST=selenium-hub
+    networks:
+      - test-network
+
+  edge:
+    image: selenium/node-edge:4.35.0-20250828
+    platform: linux/amd64
+    shm_size: 2gb
+    depends_on:
+      - selenium-hub
+    environment:
+      - SE_EVENT_BUS_HOST=selenium-hub
+    networks:
+      - test-network
+
+  firefox:
+    image: selenium/node-firefox:4.35.0-20250828
+    shm_size: 2gb
+    depends_on:
+      - selenium-hub
+    environment:
+      - SE_EVENT_BUS_HOST=selenium-hub
+    networks:
+      - test-network
+
+  jenkins:
+    image: jenkins/jenkins:lts
+    container_name: jenkins
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+    volumes:
+      - jenkins_home:/var/jenkins_home
+    networks:
+      - test-network
+
+volumes:
+  jenkins_home:

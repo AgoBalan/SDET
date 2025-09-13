@@ -1,0 +1,1 @@
+docker-compose scale chrome=5 >>outputOfNodeUp.txt  2>&1

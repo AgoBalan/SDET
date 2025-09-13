@@ -8,7 +8,7 @@ public class GridServer2Test extends BaseTest {
     @Test
     public void testAfricaCustomers() throws SQLException {
           // Navigate to your web application
-        driver.get("https://www.yahoo.com");
+        driver.get("https://www.facebook.com");
            System.out.println("Title: " + driver.getTitle());
         driver.quit();
            try{

@@ -14,8 +14,12 @@ This project demonstrates
 *********************
 9.Execution using docker,images pulled from docker hub or selenium hub or git SeleniumHQ
 docker-selenium
-
 10. Selenum Grid execution
+11. Executing from bacth File
+12. Scan Server logs for succesfull server start then start Test execution. redirect to logs >>output.txt
+13.Scale up the chrome node.
+14. Monitor server logs before starting teh execution.
+15. run it feom jenkins
 
 # JDBC Database Connection Demo
 ## JDBC Components Explained
@@ -273,3 +277,6 @@ docker-compose scale chrome=5
  ✔ Container jdbc-demo-chrome-4  Started                                                  0.7s
 
  #######################
+
+ pull jenkins image using
+  docker pull jenkins/jenkins:latest

@@ -1,0 +1,4 @@
+Attaching to chrome-1, edge-1, firefox-1, jenkins, selenium-hub
+selenium-hub  | Virtual environment detected at /opt/venv, activating...
+Gracefully Stopping... press Ctrl+C again to force
+selenium-hub  | Python 3.12.3

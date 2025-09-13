@@ -1,0 +1,1 @@
+docker compose -f composeJenkins.yaml up >>output.txt

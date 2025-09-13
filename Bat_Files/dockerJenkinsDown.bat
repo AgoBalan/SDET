@@ -1,0 +1,1 @@
+docker compose -f composeJenkins.yaml down >>outputOfDown.txt
