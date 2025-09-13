@@ -15,11 +15,12 @@ This project demonstrates
 9.Execution using docker,images pulled from docker hub or selenium hub or git SeleniumHQ
 docker-selenium
 10. Selenum Grid execution
-11. Executing from bacth File
+11. Executing from bacth File - docker compose (locally)
 12. Scan Server logs for succesfull server start then start Test execution. redirect to logs >>output.txt
 13.Scale up the chrome node.
 14. Monitor server logs before starting teh execution.
-15. run it feom jenkins
+15. Build jdk 17 image by ourself (jenkins-jdk17.dockerfile) and push the img
+15. run it from Docker jenkins(Refer screenshot attached local-JenkinsRunSampleImage).
 
 # JDBC Database Connection Demo
 ## JDBC Components Explained
