@@ -19,8 +19,27 @@ docker-selenium
 12. Scan Server logs for succesfull server start then start Test execution. redirect to logs >>output.txt
 13.Scale up the chrome node.
 14. Monitor server logs before starting teh execution.
+********* Docker based Jenkins: port 8080
 15. Build jdk 17 image by ourself (jenkins-jdk17.dockerfile) and push the img
 15. run it from Docker jenkins(Refer screenshot attached local-JenkinsRunSampleImage).
+
+***** Jenkins installed in windows port 7777 for view CICD**********
+After login in to Jenkins.
+ >Install build pipeline plugin first  <<<Genrally for small scale applciations>>>
+ > Create new view "Demo view" Setup Base job -> BUild
+ > Have another new job "Deploy to QA" this has to run after Build job completes
+ >Another job "Testing" this has to run after Buil"Deploy to QA" job compeltes
+ >Another job "Deploy to prod" this has to run after Buil"Testing" job compeltes
+  ***Refere screenshot udner the folder "Screenshot"Jenkins-Pipeline for CI-CD *******
+
+<<Enterprise applciations>>
+ New Item->Pipeline Project and Name it "pipelineScriptDemo"
+Pipeline is created by executing Jenkisn file(Which stores entire work flow).
+File writtred using GROOVY DSL(Domain Specifc language).
+ 2 Ways:
+  >Declarative pipleine syntax --> Famous and trending one
+  >Descriptive pipleine Syntax
+
 
 # JDBC Database Connection Demo
 ## JDBC Components Explained
