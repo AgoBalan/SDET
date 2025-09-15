@@ -39,6 +39,12 @@ File writtred using GROOVY DSL(Domain Specifc language).
  2 Ways:
   >Declarative pipleine syntax --> Famous and trending one
   >Descriptive pipleine Syntax
+REfer Jenkinsfile in teh root directory, this is refered to the pipeline job in jenkins
+  Refre screenshot folder descriptivePipeline screenshot
+  ************************************
+
+  16. Data providers TestNG and Excel
+    
 
 
 # JDBC Database Connection Demo
