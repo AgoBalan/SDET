@@ -44,6 +44,36 @@ REfer Jenkinsfile in teh root directory, this is refered to the pipeline job in 
   ************************************
 
   16. Data providers TestNG and Excel
+  17.Apache POI - excel dependecies
+  18,add Tesng dependecy so that it is maven portable, until now we rely on testng plugin. that si no more neeeded.
+  > Interview question, How to get row count adn column count
+     int rowCount = sheet.getPhysicalNumberOfRows();
+     int colCount = sheet.getRow(0).getLastCellNum(); --> there is no direct method to get column count
+
+     Refer GrdiServerTest1.java file for example
+
+ *****Java Streams and lambda expression to build optimized code *********
+    > there is no use of intermediate operator if termainal operator is not rpesent
+    > terminal opertator works if intermediate returns true(in case of filter)
+    > YOu can craete stream, no need to relay on collections using stream.of("A",b",c").filter()
+
+    Methods:Filter, concat,Map,Matchany,sorted,distinct
+
+    Refer main.java file for examples
+
+***************************GIT**************
+Version control System
+git init-> creates a .git file inside the project and make the project ready to be pushed
+Staging == git add * _> * means all, adding the files to temproray meomory for the first time
+git commit -m "first commit"
+**Connecting remore repo to local repo
+git remote add origin https://github.com/demo/asdas.git
+git push origin master
+ got clone --> to clone new project from GIT
+ 
+
+
+
     
 
 

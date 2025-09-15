@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Stream;
 
 import org.apache.commons.text.StringEscapeUtils;
 import org.json.simple.JSONObject;
@@ -64,8 +65,58 @@ public class Main {
             // convert json to pojo object using jackson
             CustomerInfo c = mapper.readValue(cusJsonfromJackson.get(0), CustomerInfo.class);
       
+
+            //Streams in java
+            ArrayList<String> courses = new ArrayList<String>();
+            courses.add("Selenium");
+            courses.add("QTP");
+            courses.add("TestComplete");
+            //Filter
+            //stream  //intermediate operation   //terminal operation
+            courses.stream().filter(x-> x.contains("S")).limit(1).forEach(x->System.out.println(x));
+            courses.stream().filter(x-> x.contains("S")).toList(); //terminal operation
+            courses.stream().filter(x-> x.contains("S")).count();
+
+            //Right side can be a 
+            courses.stream().filter(x->
+            {
+                x.contains("e");
+                x.startsWith("S");
+                return true;
+            }) .count();
+
+            //map to conver the given input to some other form
+            courses.stream().map(x->x.toUpperCase()).forEach(x->System.out.println(x));
+            long d = courses.stream().map(x->x.toUpperCase()).filter(x->x.contains("E")).count();
+            System.out.println(d);
+
+            //sort the stream
+            courses.stream().sorted().forEach(x->System.out.println(x));    
+           //Merge 2 lists
+            ArrayList<String> courses2 = new ArrayList<String>();           
+            courses2.add("Cypress");
+            courses2.add("Playwright");
+
+            List<String> merged =  new ArrayList<String>();
+            merged.addAll(courses); 
+            merged.addAll(courses2);
+            //using stream merge 2 lists
+            Stream.concat(courses.stream(), courses2.stream()).forEach(x->System.out.println(x));
+
+            //anyMatch, allMatch, noneMatch
+            boolean b = courses.stream().anyMatch(x->x.contains("S"));  
+            System.out.println(b);
+            b = courses.stream().allMatch(x->x.contains("S"));         System.out.println(b);
+
+            //sort based on length of string
+            courses.stream().sorted((x,y)->x.length()-y.length()).forEach(x->System.out.println(x));
+
+            //avoid duplicate in stream
+            courses.stream().distinct().forEach(x->System.out.println(x));
             
-        } catch (SQLException e) {
+
+
+        } catch (SQLException e) {  
             System.err.println("Database error: " + e.getMessage());
             e.printStackTrace();
         } catch (java.io.IOException e) {
