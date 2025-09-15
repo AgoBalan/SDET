@@ -1,7 +1,7 @@
 pipeline {
     agent any  // This specifies that the pipeline can run on any available agent,Agent means any conncted machine
     tools {
-      maven 'Maven_3.911' // Match the name from Global Tool Configuration
+      maven 'Maven1' // Match the name from Global Tool Configuration
     }
     stages {
         stage('Build') {
